@@ -1,4 +1,4 @@
-def const(a, b):
+def cons(a, b):
     def pair(f):
         return f(a, b)
     return pair
@@ -13,11 +13,11 @@ def cdr(pair):
         return b
     return pair(last)
 
-assert(car(const(5, 9)) == 5)
-assert(cdr(const(3, 20)) == 20)
+assert(car(cons(5, 9)) == 5)
+assert(cdr(cons(3, 20)) == 20)
 
-assert(car(const("a", "b")) == "a")
-assert(cdr(const(3.5, 4.5)) == 4.5)
+assert(car(cons("a", "b")) == "a")
+assert(cdr(cons(3.5, 4.5)) == 4.5)
 
-assert(car(const(3, 4)) == 3)
-assert(cdr(const(3, 4)) == 4)
+assert(car(cons(3, 4)) == 3)
+assert(cdr(cons(3, 4)) == 4)
